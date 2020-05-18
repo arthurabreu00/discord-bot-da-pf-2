@@ -28,7 +28,7 @@ client.on("message", (msg) => {
                 msg.member.voiceChannel.connection.playOpusStream(await ytdl('https://www.youtube.com/watch?v=9QXQe08U-GA'));
                 const user = msg.mentions.users.first();
                 if (user) {
-                    let motivo = msg.cleanContent.replace(msg.mentions.users.first().username, '').replace('!denuncia', '');
+                    let motivo = msg.cleanContent.replace(msg.mentions.users.first().username, '').replace('!denuncia', '').replace('@', '');
                     await user.send(messagePrivate.sendDmMessage(user.username, motivo));
                 }
             }
