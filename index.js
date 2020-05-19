@@ -43,18 +43,6 @@ client.on("message", (msg) => {
         }
       }
     },
-    clear: () => {
-      if (msg.member.hasPermission("MANAGE_MESSAGES")) {
-        msg.channel.fetchMessages().then(
-          function (list) {
-            msg.channel.bulkDelete(list);
-          },
-          function (err) {
-            msg.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-          }
-        );
-      }
-    },
   };
 
   if (commands[userCommand]) {
