@@ -31,7 +31,7 @@ client.on("message", (msg) => {
         msg.channel.send("https://static.poder360.com.br/2019/08/giphy-2.gif");
         await msg.member.voiceChannel.join();
         msg.member.voiceChannel.connection.playOpusStream(
-          await ytdl("https://www.youtube.com/watch?v=9QXQe08U-GA")
+          await ytdl("https://www.youtube.com/watch?v=Edf1zvhmgAw")
         );
         const user = msg.mentions.users.first();
         if (user) {
